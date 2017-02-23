@@ -1,0 +1,15 @@
+$.ajax({
+	url	: 'illust_list.php',
+	type	: 'POST',
+	data	: {
+		'illpage'	: page,
+		'selected' : document.frm.left_code.value
+	},
+	dataType: 'html',
+	success	: function(response){
+		$(".artbook_pic_list").empty();
+		$(".artbook_pic_list").append(response);
+		$("a[name^='illust_page']").attr("class","");
+		$("a[name='illust_page"+p_page+"']").attr("class","on");
+	}
+});
