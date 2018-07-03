@@ -25,7 +25,7 @@ function check_upload_path($target,$name,$fname=""){
       @unlink(_LOCAL_.'/upload/'.$target.'/'.$name);
       return true;
     }
-  }catch(Exception e){
+  }catch(Exception $e){
     return false;
   }
 }
